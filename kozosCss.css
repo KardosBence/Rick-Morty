@@ -1,0 +1,28 @@
+#navbarLogo{
+    width: 130px;
+}
+body{
+    background: url("/anyagok/bg2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.page-link{
+    font-size: 20px;
+}
+#navigation{
+    margin-top: 20px;
+}
+.navbar{
+    background-color: #040505;
+}
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-thumb {
+    background: #4d688a;
+    border-radius: 20px;
+}
+::-webkit-scrollbar-track {
+    background-color: #000000;
+}
