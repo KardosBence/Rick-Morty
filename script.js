@@ -209,7 +209,7 @@ function Feldolgozas(characters) {
 
         var gomb = document.createElement("a");
         gomb.setAttribute("class", "btn btn-success mt-2 w-100");
-        gomb.setAttribute("href", "index.html?charId=" + characters.results[i].id);
+        gomb.setAttribute("href", "../character/index.html?charId=" + characters.results[i].id);
         gomb.appendChild(document.createTextNode("Bővebb Info..."));
 
         divBody.appendChild(gomb);
