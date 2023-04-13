@@ -2,7 +2,7 @@
     width: 130px;
 }
 body{
-    background: url("../anyagok/bg2.png");
+    background: url("anyagok/bg2.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
