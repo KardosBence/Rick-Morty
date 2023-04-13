@@ -7,7 +7,7 @@ document.getElementById("nevKereses").addEventListener("keyup", function(event) 
   });
 
   document.getElementById("nevKeresesInditas").addEventListener("click", function(event) {
-    window.location.href = "/locations/index.html?name=" + document.getElementById("nevKereses").value;
+    window.location.href = "locations/index.html?name=" + document.getElementById("nevKereses").value;
 }, false);
 
 //URl adatkinyeres
@@ -55,7 +55,7 @@ function Feldolgozas(locations) {
     elsoOldalLi.setAttribute("class", "page-item");
     elsoOldalA.setAttribute("class", "page-link");
 
-    var elsoOldalAUrl = "/locations/index.html?page=1";
+    var elsoOldalAUrl = "locations/index.html?page=1";
     if (cname != null) {
         elsoOldalAUrl += "&name=" + cname;
     }
@@ -99,7 +99,7 @@ function Feldolgozas(locations) {
         szamOldalA.setAttribute("style", "color: black");
         szamOldalA.setAttribute("class", "page-link");
 
-        var szamOldalAUrl = "/locations/index.html?page=" + i;
+        var szamOldalAUrl = "locations/index.html?page=" + i;
         if (cname != null) {
             szamOldalAUrl += "&name=" + cname;
         }
@@ -120,7 +120,7 @@ function Feldolgozas(locations) {
     utosloOldalLi.setAttribute("class", "page-item");
     utosloOldalA.setAttribute("class", "page-link");
 
-    var utolsoOldalAUrl = "/locations/index.html?page=" + locations.info.pages;
+    var utolsoOldalAUrl = "locations/index.html?page=" + locations.info.pages;
     if (cname != null) {
         utolsoOldalAUrl += "&name=" + cname;
     }
