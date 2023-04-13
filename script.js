@@ -7,7 +7,7 @@ document.getElementById("nevKereses").addEventListener("keyup", function(event) 
   });
 
   document.getElementById("nevKeresesInditas").addEventListener("click", function(event) {
-    window.location.href = "/characters/index.html?name=" + document.getElementById("nevKereses").value;
+    window.location.href = "/index.html?name=" + document.getElementById("nevKereses").value;
 }, false);
 
 //=============================================================================
@@ -57,7 +57,7 @@ function Feldolgozas(characters) {
     elsoOldalLi.setAttribute("class", "page-item");
     elsoOldalA.setAttribute("class", "page-link");
 
-    var elsoOldalAUrl = "/characters/index.html?page=1";
+    var elsoOldalAUrl = "/index.html?page=1";
     if (cname != null) {
         elsoOldalAUrl += "&name=" + cname;
     }
@@ -101,7 +101,7 @@ function Feldolgozas(characters) {
         szamOldalA.setAttribute("style", "color: black");
         szamOldalA.setAttribute("class", "page-link");
 
-        var szamOldalAUrl = "/characters/index.html?page=" + i;
+        var szamOldalAUrl = "/index.html?page=" + i;
         if (cname != null) {
             szamOldalAUrl += "&name=" + cname;
         }
@@ -120,7 +120,7 @@ function Feldolgozas(characters) {
     utosloOldalLi.setAttribute("class", "page-item");
     utosloOldalA.setAttribute("class", "page-link");
 
-    var utolsoOldalAUrl = "/characters/index.html?page=" + characters.info.pages;
+    var utolsoOldalAUrl = "/index.html?page=" + characters.info.pages;
     if (cname != null) {
         utolsoOldalAUrl += "&name=" + cname;
     }
@@ -209,7 +209,7 @@ function Feldolgozas(characters) {
 
         var gomb = document.createElement("a");
         gomb.setAttribute("class", "btn btn-success mt-2 w-100");
-        gomb.setAttribute("href", "/character/index.html?charId=" + characters.results[i].id);
+        gomb.setAttribute("href", "/index.html?charId=" + characters.results[i].id);
         gomb.appendChild(document.createTextNode("Bővebb Info..."));
 
         divBody.appendChild(gomb);
