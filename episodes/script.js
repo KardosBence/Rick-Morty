@@ -7,7 +7,7 @@ document.getElementById("nevKereses").addEventListener("keyup", function(event) 
   });
 
   document.getElementById("nevKeresesInditas").addEventListener("click", function(event) {
-    window.location.href = "episodes/index.html?name=" + document.getElementById("nevKereses").value;
+    window.location.href = "../episodes/index.html?name=" + document.getElementById("nevKereses").value;
 }, false);
 
 //URl adatkinyeres
@@ -57,7 +57,7 @@ function Feldolgozas(episodes) {
     elsoOldalA.setAttribute("class", "page-link");
     elsoOldalA.setAttribute("href", "/episodes/index.html?page=1");
 
-    var elsoOldalAUrl = "episodes/index.html?page=1";
+    var elsoOldalAUrl = "../episodes/index.html?page=1";
     if (cname != null) {
         elsoOldalAUrl += "&name=" + cname;
     }
@@ -91,7 +91,7 @@ function Feldolgozas(episodes) {
         szamOldalA.setAttribute("class", "page-link");
         szamOldalA.setAttribute(
             "href",
-            "episodes/index.html?page=" + i + (cname ? "&name=" + cname : "")
+            "../episodes/index.html?page=" + i + (cname ? "&name=" + cname : "")
         );
 
         szamOldalA.appendChild(document.createTextNode(i));
@@ -110,7 +110,7 @@ function Feldolgozas(episodes) {
     utosloOldalA.setAttribute("class", "page-link");
     utosloOldalA.setAttribute("href", "episodes/index.html?page=" + episodes.info.pages);
 
-    var utolsoOldalAUrl = "episodes/index.html?page=" + episodes.info.pages;
+    var utolsoOldalAUrl = "../episodes/index.html?page=" + episodes.info.pages;
     if (cname != null) {
         utolsoOldalAUrl += "&name=" + cname;
     }
