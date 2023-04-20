@@ -154,21 +154,22 @@ function Feldolgozas(characters) {
         h5.setAttribute("class", "card-title");
         h5.appendChild(document.createTextNode(characters.results[i].name));
 
-        var ul = document.createElement("ul");
+        var divText = document.createElement("div");
+        divText.setAttribute("class", "card-text my-4 text-indent-2");
 
-        var li1 = document.createElement("li");
-        var li2 = document.createElement("li");
-        var li3 = document.createElement("li");
-        var li4 = document.createElement("li");
-        var li5 = document.createElement("li");
-        var li6 = document.createElement("li");
+        var p1 = document.createElement("p");
+        var p2 = document.createElement("p");
+        var p3 = document.createElement("p");
+        var p4 = document.createElement("p");
+        var p5 = document.createElement("p");
+        var p6 = document.createElement("p");
 
         //(feltetel) ? igaz : hamis;
-        li1.appendChild(document.createTextNode(characters.results[i].status));
-        li2.appendChild(document.createTextNode(characters.results[i].species));
-        li3.appendChild(document.createTextNode((characters.results[i].type == "") ? "No Type" : characters.results[i].type));
-        li4.appendChild(document.createTextNode(characters.results[i].gender));
-        li5.appendChild(document.createTextNode(characters.results[i].location.name));
+        p1.appendChild(document.createTextNode(characters.results[i].status));
+        p2.appendChild(document.createTextNode(characters.results[i].species));
+        p3.appendChild(document.createTextNode((characters.results[i].type == "") ? "No type" : characters.results[i].type));
+        p4.appendChild(document.createTextNode(characters.results[i].gender));
+        p5.appendChild(document.createTextNode(characters.results[i].location.name));
 
         var color;
 
@@ -186,29 +187,31 @@ function Feldolgozas(characters) {
                 break;
         }
 
-        li1.setAttribute("style", "color: " + color + "; " + "font-weight: bold");
+        p1.setAttribute("style", "color: " + color + "; " + "font-weight: bold");
 
         //Epizod cimenek kinyerese API-n keresztul
         xhr.open("GET", characters.results[i].episode[0], false);
         xhr.onreadystatechange = function () {
             if (xhr.readyState == 4 && xhr.status == 200) {
-                li6.appendChild(document.createTextNode(
+                p6.appendChild(document.createTextNode( 
                     JSON.parse(xhr.responseText).name
                 ));
             }
         };
         xhr.send(null);
 
+        divText.appendChild(p1);
+        divText.appendChild(p2);
+        divText.appendChild(p3);
+        divText.appendChild(p4);
+        divText.appendChild(p5);
+        divText.appendChild(p6);
+
         divBody.appendChild(h5);
-        divBody.appendChild(li1);
-        divBody.appendChild(li2);
-        divBody.appendChild(li3);
-        divBody.appendChild(li4);
-        divBody.appendChild(li5);
-        divBody.appendChild(li6);
+        divBody.appendChild(divText);
 
         var gomb = document.createElement("a");
-        gomb.setAttribute("class", "btn btn-success mt-2 w-100");
+        gomb.setAttribute("class", "btn btn-success my-3 m-auto w-100");
         gomb.setAttribute("href", "character/index.html?charId=" + characters.results[i].id);
         gomb.appendChild(document.createTextNode("Bővebb Info..."));
 
