@@ -137,7 +137,7 @@ function Feldolgozas(characters) {
 
         //Kartya osszerakas
         var col = document.createElement("div");
-        col.setAttribute("class", "col-12 col-md-6 col-lg-4 col-xl-3 mb-4");
+        col.setAttribute("class", "col-8 col-md-6 col-lg-4 col-xl-3 mb-4");
 
         var divCard = document.createElement("div");
         divCard.setAttribute("class", "card h-100 w-100");
